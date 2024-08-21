@@ -1,0 +1,15 @@
+
+@RestController("/form")
+public class RegistrationController{
+
+  @Autowired()
+  private  RegisterService registerService;
+
+   @PostMapping("/details")
+   public String registrationForm(){
+     List<String> list = registerService.createUser("bhawna", "abc" ,"bhawna@gmmil.com" , 24-aug-1998);
+     return "user details enter";
+   }
+
+
+}
